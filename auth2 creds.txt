@@ -1,0 +1,9 @@
+
+client id
+844733290120-i99sb6nar0olmji34qj4f01cpddqaik0.apps.googleusercontent.com
+
+
+
+
+secret id
+MVQ17DkGXKAYt_kea2Zvp5Hx
