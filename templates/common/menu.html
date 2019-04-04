@@ -1,0 +1,52 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="static/logo/kisan-final.png" height="90px" width="200px" class="logo"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+			<li class="nav-item active">
+				<a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#about">About Us <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item ">
+				<a class="nav-link" href="#contact">Contact Us<span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item ">
+				<a class="nav-link" href="#partners">Partners<span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item ">
+				<a class="nav-link" href="#portfolio">Products<span class="sr-only">(current)</span></a>
+			</li>
+			{% if session.log %}
+				<li class="nav-item">
+					<a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i>Cart</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/logout">Logout</a>
+				</li>
+				{%else%}
+				<li class="nav-item">
+					<a class="nav-link" href="/register">Register</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/login" class="nav-link">Login</a>
+				</li>
+			{% endif %}
+		</ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+

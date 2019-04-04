@@ -1,0 +1,132 @@
+{% extends "layout.html"%}
+{% block body%}
+    <div class="w3-container">
+        <h2>Payment Information</h2>
+        <br><br>
+        <h4>Total Amount is:{{ramount}} </h4>
+    </div>
+    <div class="w3-bar w3-black" >
+  <button class="w3-bar-item w3-button" onclick="openCity('credit/debit')"><img src="{{ url_for('static', filename='imgs/mastercard.png')}}" height="20px" width="30px"><img src="{{ url_for('static', filename='imgs/visa.png')}}" height="20px" width="30px"></button>
+  <button class="w3-bar-item w3-button" onclick="openCity('Paytm')"><img src="{{ url_for('static', filename='imgs/paytm.png')}}" height="20px" width="50px"></button>
+  <button class="w3-bar-item w3-button" onclick="openCity('Cod')"><img src="{{ url_for('static', filename='imgs/cod.png')}}" height="35px" width="60px"></button>
+</div>
+<div id="credit/debit" class="w3-container-payment">
+ <form>
+    <div class="creditCardForm">
+    <div class="heading">
+        <h1>Confirm Purchase</h1>
+    </div>
+    <div class="payment">
+        <form>
+            <div class="form-group owner">
+                <input type="text" class="form-control" id="owner" placeholder="Owner">
+            </div>
+            <div class="form-group CVV">
+               
+                <input type="text" class="form-control" id="cvv" placeholder="CVV">
+            </div>
+            <div class="form-group" id="card-number-field">
+                
+                <input type="text" class="form-control" id="cardNumber" placeholder="Card Number">
+            </div>
+            <div class="form-group" id="expiration-date">
+                <label style="text-align:left;padding-left:20px;">Expiry Date</label>
+                <select>
+                    <option value="01">January</option>
+                    <option value="02">February </option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <select>
+                    <option value="16"> 2016</option>
+                    <option value="17"> 2017</option>
+                    <option value="18"> 2018</option>
+                    <option value="19"> 2019</option>
+                    <option value="20"> 2020</option>
+                    <option value="21"> 2021</option>
+                </select>
+            </div>
+            <div class="form-group" id="credit_cards">
+                <img src="static/imgs/visa.png" id="visa" height="40px" width="60px">
+                <img src="static/imgs/mastercard.png" id="mastercard" height="40px" width="60px">
+                
+            </div>
+            <div class="form-group" id="pay-now">
+                <button type="submit" class="btn btn-default" id="confirm-purchase">Confirm</button>
+            </div>
+        </form>
+    </div>
+</div>
+ </form>
+</div>
+<div id="Paytm" class="w3-container-payment" style="display:none">
+  <form><h2>Pay with PayTm</h2>
+  <p>The simple, fast solution for a quick purchase</p> 
+  <h4>Order total:{{ramount}} </h4>
+  <button name="paytm" class="pay"><img src="{{ url_for('static', filename='imgs/paytm.png')}}" height="40px" width="90px"> </button>
+  </form>
+</div>
+<div id="Cod" class="w3-container-payment" style="display:none">
+  <h2>Cash On Delivery</h2>
+  <p>Give proper detais for easy delivery and payments</p>
+  <div class="row">
+  <div class="col-75">
+    <div class="container">
+      
+      
+        <div class="row">
+          <div class="col-50" style="text-align:left;">
+            <h3 style="text-align:center;padding-top:1%;">Billing Address</h3><br><br>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label><br>
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe"><br>
+            <label for="email"><i class="fa fa-envelope"></i> Email</label><br>
+            <input type="text" id="email" name="email" placeholder="john@example.com"><br>
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label><br>
+            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street"><br>
+            <label for="city"><i class="fa fa-institution"></i> City</label><br>
+            <input type="text" id="city" name="city" placeholder="New York"><br>
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="NY">
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+              </div>
+            </div>
+          </div>
+          <div class="col-">
+            
+          </div>
+          
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label>
+		<form action="/sellorders" method="POST">
+        <button type="submit" value="payment" name="submit" class="btn">continue</button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+function openCity(cityName) {
+  var i;
+  var x = document.getElementsByClassName("w3-container-payment");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(cityName).style.display = "block";  
+}
+</script>
+{%endblock%}

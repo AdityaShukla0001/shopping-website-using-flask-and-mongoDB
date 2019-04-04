@@ -1,0 +1,50 @@
+
+
+{% extends "layout.html"%}
+{% block body%}
+
+
+<body>
+
+					
+	
+<!-------sale--------->
+	<section class="on-sale">
+	<div class="container">
+		<div class="title-box">
+			<h2>On Sale</h2>
+		</div>
+
+<br>		<div class="row">
+			{% if rresult %}
+
+			{% for x in range(rcount) %}
+			<div class="col-md-4">
+				<!-----for loop laga-------------->
+				<div class="product-top">
+					
+				</div>
+				<div class="product-bottom text-center"  style="margine:10%">
+					<h3>Name : {{rresult[x]['model_name']}}</h3>
+					<h5>Price : {{rresult[x]['expected_price']}}</h5>
+			<form action="/removefromyourorders" method='POST'>
+			<button type="submit" name =  "remove" value ="{{rresult[x]['model_name']}}">Remove from rent</button>
+			</form>
+				</div>
+			</div>
+			{% endfor %}
+			{% else %}
+			<h2>{{ data }}</h2>
+			{%  endif %}
+
+		</div>
+	</div>
+	</section>
+
+	
+
+
+
+</body>
+
+{%endblock%}

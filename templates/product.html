@@ -1,0 +1,45 @@
+
+{% extends "layout.html"%}
+{% block body%}
+	
+	<!-----------Single product Info------------->
+	<section class="single-product">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<img src="">
+				</div>
+
+				<div class="col-md-7">
+					<p class="new-arrival text-center">NEW</p>
+					{%if redemo['rmodel'] != "-"%}<h2>Name: {% if redemo['rcheck'] =="yes" %}<i class="fa fa-check-circle"></i></h2>{% endif %}
+					{%if redemo['rengine_cc'] != "-"%}<p>Engine:</p>{% endif %}
+					{%if redemo['rno_of_cylinders'] != "-"%}<p>No of Cylinders:</p>{% endif %}
+					{%if redemo['rpower'] != "-"%}<p>Power:</p>{% endif %}
+					{%if redemo['rfule_tak_capacity'] != "-"%}<p>Fuel tank:</p>{% endif %}
+					{%if redemo['rprice'] != "-"%}<p class="price">Rs.10000</p>{% endif %}
+					{%if redemo['rflow_rate'] != "-"%}<p>Flow rate:</p>{% endif %}
+					<p><b>Availablity:</b> In Stock</p>
+					
+					
+					<button type="button" class="btn btn-product">Add to Cart</button>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!----------------Product desc-------------------->
+
+	<section class="product-description">
+		<div class="container">
+			<h4>Product Description</h4>
+			<p>DESC</p>
+		</div>
+	</section>
+
+{% endblock %}
+
+
+
+	

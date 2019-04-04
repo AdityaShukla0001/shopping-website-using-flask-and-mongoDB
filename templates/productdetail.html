@@ -1,0 +1,36 @@
+{% extends "layout.html"%}
+{% block body%}
+
+    <center><h1>Seller Register</h1></center>
+	<div class="bg-img">
+    <center><form action="" method="POST">
+	<div class="container1" align="center">
+       
+            <input type="text" name="model_name" class = "form-control" placeholder="Model Name" required><br>
+        
+        
+            <input type="text" name="years_of_use" class = "form-control" placeholder="Years Of Use" required><br>
+        
+        
+            <input type="text" name="expected_price" class = "form-control" placeholder="Expected Price" required><br>
+        
+            <input type="text" name="under_warrennty" class = "form-control" placeholder="Under Warrenty Yes/No" required><br>
+			 <input type="text" name="phone" class = "form-control" placeholder="Phone Number" required><br>
+				 <input type="text" name="min-deposit" class = "form-control" placeholder="Minimum deposit" required><br>
+				 
+				  <input type="text" name="1-day-rent" class = "form-control" placeholder="1 Day Rent" required><br>
+			
+        
+			 <input type="file" id="photo" name="photo" />
+                
+                    <button type="submit" style="font-size:15px; width: 25%;" class="aa-browse-btn" name="Upload" value="Upload Photo"/> Upload</button><br>
+        <button type="submit" style="font-size:20px" class="aa-browse-btn" >Submit</button> 
+		 </div>
+		 <div class="section2">Note: Only image files are allowed.</div>
+                <div class="inner-wrap">
+                 
+                  </div>
+                </div>
+    </form></center>
+	</div>
+{%endblock%}

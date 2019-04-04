@@ -1,0 +1,250 @@
+
+
+.w3-container
+{
+  text-align: center;
+}
+/* Style the tab */
+.w3-bar {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  text-align: center;
+
+
+
+}
+
+/* Style the buttons inside the tab */
+.w3-bar button {
+  background-color: inherit;
+  float: none;
+  position: relative;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+
+}
+
+/* Change background color of buttons on hover */
+.w3-bar button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.w3-bar button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.w3-container-payment {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  text-align: center;
+}
+/*-----------------*/
+
+.creditCardForm {
+    max-width: 700px;
+    background-color: #fff;
+    margin: 100px auto;
+    overflow: hidden;
+    padding: 25px;
+    color: #4c4e56;
+}
+.creditCardForm label {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.creditCardForm .heading h1 {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #4c4e56;
+}
+.creditCardForm .payment {
+    float: left;
+    font-size: 18px;
+    padding: 10px 25px;
+    margin-top: 20px;
+    position: relative;
+}
+.creditCardForm .payment .form-group {
+    float: left;
+    margin-bottom: 15px;
+}
+.creditCardForm .payment .form-control {
+    line-height: 40px;
+    height: auto;
+    padding: 0 16px;
+}
+.creditCardForm .owner {
+    width: 63%;
+    margin-right: 10px;
+}
+.creditCardForm .CVV {
+    width: 35%;
+}
+.creditCardForm #card-number-field {
+    width: 100%;
+}
+.creditCardForm #expiration-date {
+    width: 49%;
+}
+.creditCardForm #credit_cards {
+    width: 50%;
+    margin-top: 25px;
+    text-align: right;
+}
+.creditCardForm #pay-now {
+    width: 100%;
+    margin-top: 25px;
+}
+.creditCardForm .payment .btn {
+    width: 100%;
+    margin-top: 3px;
+    font-size: 24px;
+    background-color: #2ec4a5;
+    color: white;
+}
+.creditCardForm .payment select {
+    padding: 10px;
+    margin-right: 15px;
+}
+.transparent {
+    opacity: 0.2;
+}
+@media(max-width: 650px) {
+    .creditCardForm .owner,
+    .creditCardForm .CVV,
+    .creditCardForm #expiration-date,
+    .creditCardForm #credit_cards {
+        width: 100%;
+    }
+    .creditCardForm #credit_cards {
+        text-align: left;
+    }
+}
+button.pay
+{
+  border-radius: 7px;
+  background-color: #fff;
+
+}
+
+#Paytm
+{
+  background-color: #AED6F1;
+}
+
+/*-------------cod--------------*/
+
+body {
+  font-family: Arial;
+  font-size: 15px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 70%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+
+#pay-now:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+#pay-now 
+{
+	background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 70%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}

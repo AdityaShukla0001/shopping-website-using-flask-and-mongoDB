@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/cartkacss.css')}}">
+	
+	
+	<title>Kisaan Bazzar</title>
+</head>
+<body>
+  <div id="w">
+    <header id="title">
+      <h1> Shopping Cart </h1>
+    </header>
+    <div id="page">
+      <table id="cart">
+        <thead>
+          <tr>
+            <th class="first">Photo</th>
+           
+            <th class="third">Product</th>
+            <th class="fourth">Line Total</th>
+            <th class="fifth">&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- shopping cart contents -->
+          
+			{% if rresult %}
+			  {% for x in range(rcount) %}
+		
+			  <tr class="productitm">
+				<!-- http://www.barnesandnoble.com/w/javascript-and-jquery-david-sawyer-mcfarland/1100405042 -->
+				
+				<td><img src="{{rresult[x]['image_url']}}" class="thumb"></td>            
+				<td>{{rresult[x]['model_name']}}</td>
+				<td>{{rresult[x]['price']}}</td>
+				<td><span class="remove">
+				<form action="/removefromcart" method="POST">
+				<button type="submit" name="remove" value="{{rresult[x]['model_name']}}">
+				<img src="{{ url_for('static', filename='images/delete.png')}}" alt="X">
+				</button>
+				</form>
+				</span>
+				</td>
+			  </tr>
+			  
+			 
+				{% endfor %}
+			{%else%}
+				<h2>{{data}}</h2>
+			{%endif%}
+          <!-- tax + subtotal -->
+         
+          <tr class="totalprice">
+            <td class="light">Total:{{rtotal}}</td>
+            <td colspan="2">&nbsp;</td>
+            <!-- <td colspan="2"><span class="thick">{{rtotal}}</span></td> -->
+          </tr>
+          
+          <!-- checkout btn -->
+          <tr class="checkoutrow">
+            <td colspan="5" class="checkout"><form action="/payment" method="POST" ><button type="submit" id="submitbtn" name="payment" value={{rtotal}}>Checkout Now!</button></form></td>
+          </tr>
+        </tbody>
+      </table>
+	  
+	  
+	  
+	  
+    </div>
+  </div>
+</body>
+</html>

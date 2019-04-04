@@ -1,0 +1,40 @@
+{% extends "layout.html"%}
+{% block body%}
+<div class = "container">
+    <h1>product details</h1>
+    <form action="/productdetails" method="POST">
+    {% if redemo %}
+    
+    <img src="{{redemo['image_url'][0]}}" style="width:250px;" >
+    
+        {%if redemo["model"] != "-"%}
+        <h2>Name:{{redemo["model"][0]}} {% if redemo["check"] =="yes" %}<i class="fa fa-check-circle"></i></h2>{%endif%}
+        {%endif%}
+        {%if redemo["engine_cc"] != "-"%}
+        <p>Engine:{{redemo["engine_cc"][0]}}</p>
+        {%endif%}
+        {%if redemo["no_of_cylinders"] != "-"%}
+        <p>No of Cylinders:{{redemo["no_of_cylinders"][0]}}</p>
+        {%endif%}
+        {%if redemo["power"] != "-"%}
+        <p>Power:{{redemo["power"][0]}}</p>
+        {%endif%}
+        {%if redemo["fuel_tank_capacity"] != "-"%}
+        <p>Fuel tank:{{redemo["fuel_tank_capacity"][0]}}</p>
+        {%endif%}
+        {%if redemo["price"] != "-"%}
+        <p class="price">Rs.{{redemo["price"][0]}}</p>
+        {%endif%}
+        {%if redemo["flow_rate"] != "-" %}
+        <p>Flow rate:{{redemo["flow_rate"][0]}}</p>
+        {%endif%}
+        <p><b>Availablity:</b> In Stock</p>
+
+        <form action="/addtocart" method="POST">
+		<button type="submit" class="btn btn-primary" name="addtocart" value="{{redemo['model'][0]}}">Add to Cart</button>
+		</form>	
+    {% endif %}
+  
+    
+    </form>
+{%endblock%}

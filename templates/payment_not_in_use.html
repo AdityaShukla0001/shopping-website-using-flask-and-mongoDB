@@ -1,0 +1,11 @@
+{% extends "layout.html"%}
+{% block body%}
+    <div class = "container">
+        <h1>payment page</h1>
+    <form action="/sellorders" method="POST">
+    {{ramount}}
+    
+    <button class="btn btn-primary" type="submit" name ="submit" value="payamt">pay via COD</button>
+		
+    </form>
+{%endblock%}

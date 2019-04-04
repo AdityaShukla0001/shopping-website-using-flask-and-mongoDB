@@ -1,0 +1,58 @@
+
+{% extends "layout.html"%}
+{% block body%}
+
+
+<body> 
+	
+					
+<!-------sale--------->
+	<section class="on-sale">
+	<div class="container">
+		<div class="title-box">
+			<h2>On Sale</h2>
+		</div>
+		<center><form action="" method="POST" class="clickbtn">
+		<button class="btn btn-primary" type="submit" name ="submit" value="all">All</button>
+		<button class="btn btn-primary" type="submit" name ="submit" value="tractor">Tractor</button>
+		<button class="btn btn-primary" type="submit" name ="submit" value="harvester">Harvester</button>
+		<button class="btn btn-primary" type="submit" name ="submit" value="agro-engines">Agro-engines</button>
+		<button class="btn btn-primary" type="submit" name ="submit" value="batteries">Batteries</button>
+		<button class="btn btn-primary" type="submit" name ="submit" value="hydraulic_gear_pumps">Hydraulic Pumps</button>
+		<button class="btn btn-primary" type="submit" name ="submit" value="implements">Implements</button>
+		<button class="btn btn-primary" type="submit" name ="submit" value="silent-gensets">Silent-gensets</button>
+		</form></center>
+<br>		<div class="row">
+			{% if redemo %}
+
+			{% for x in range(rcount) %}
+			<div class="col-md-4">
+				<!-----for loop laga-------------->
+				<div class="">
+				<form action = "/productdetails" method = "POST">
+					<center><button type="submit" name="image" value="{{redemo['rmodel'][x]}}">
+					<img src="{{redemo['rimage_url'][x]}}" style="width:250px; height:200px;"></center><!-- static/logo/logo.png -->
+				</form>
+				</div>
+				<div class="product-bottom text-center"  style="margine:10%">
+					<h3>Name : {{redemo['rmodel'][x]}}{% if redemo["check"] =="yes" %}<i class="fa fa-check-circle"></i></h2>{%endif%}</h3>
+                    <h5>Price : {{redemo['rPrice'][x]}}</h5>
+					<form action="/addtocart" method="POST">
+					<button type="submit" class="btn btn-primary" name="addtocart" value="{{redemo['rmodel'][x]}}">Add to Cart</button>
+					</form>
+				</div>
+			</div>
+			{% endfor %}
+			{%  endif %}
+			
+		</div>
+	</div>
+	</section>
+
+
+
+
+
+</body>
+
+{%endblock%}

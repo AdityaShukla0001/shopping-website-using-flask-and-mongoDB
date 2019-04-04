@@ -1,0 +1,153 @@
+body
+{
+	margin: 0;
+	padding:0;
+
+}
+.bg
+{
+	padding: relative;
+	background: url(../imgs/background.png) no-repeat;
+	height: 100vh;
+	background-size: cover;	
+	background-position: 0 0;
+	background-repeat: repeat-x;
+	
+}
+
+.cloud .cloud01{
+
+width: 150px;
+height: 90px;
+margin-top: 100px;
+position: absolute;
+background: transparent url(../imgs/cloud.png) 0 0 no-repeat;
+animation: fly 22s linear infinite;
+
+}
+
+.cloud .cloud02{
+
+width: 160px;
+height: 85px;
+margin-top: 85px;
+
+position: absolute;
+background: transparent url(../imgs/cloud.png) 0 0 no-repeat;
+animation: fly 25s linear infinite;
+
+
+}
+.cloud .cloud03{
+
+width: 140px;
+height: 70px;
+margin-top: 210px;
+
+position: absolute;
+background: transparent url(./imgs/cloud.png) 0 0 no-repeat;
+animation: fly 30s  linear infinite;
+
+
+}
+/*.fcloud02{
+	top: 50px;
+	z-index: 100;
+	animation-name: drift;
+	animation-duration: 25s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation: drift 25s linear infinite;  
+}
+.cloud02{
+			top: 40px;
+			z-index: 200;
+			animation: drift 35s 10s linear infinite backwards;
+
+}
+*/
+.tractor{
+	width: 250px;
+    height: 200px;
+	position: relative;
+	bottom:-510px;
+	animation: drift 17s linear infinite;
+
+}
+.windmill{
+	width: 100px;
+    height: 100px;
+	position: relative;
+	bottom:-370px;
+	
+
+}
+
+.windmill2{
+	width: 130px;
+    height: 150px;
+	position: relative;
+	bottom:-410px;
+	left:290px;
+
+}
+.windmill3{
+	width: 80px;
+    height: 80px;
+	position: relative;
+	bottom:-385px;
+	left:1055px;
+
+}
+.home{
+	width: 120px;
+    height: 80px;
+	position: relative;
+	bottom:-410px;
+	left:520px;
+
+}
+.home2{
+	width: 160px;
+    height: 140px;
+	position: relative;
+	bottom:-430px;
+	left:880px;
+
+}
+@keyframes drift  
+{
+	from{
+		  left: : 0px; 
+		  transform: translate(650px);
+		  background-position: 0 0;
+			
+		
+	}
+
+	to{
+		  left: : 100px;
+			
+		  transform: translate(-850px);
+		  /* background-position: 100% 0; */
+	}	
+	
+}
+@keyframes fly  
+{
+	from{
+		  left: : 0px; 
+		  transform: translate(-255px);
+		  /*background-position: 0 0;*/
+			
+		
+	}
+
+	to{
+		  left: : 100px;
+
+		  transform: translate(1350px);
+		  /*background-position: 100% 0;*/
+	}	
+	
+}

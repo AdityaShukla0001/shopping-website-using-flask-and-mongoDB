@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" conntent="ie=edge">
+    <title>Tractor Mandi</title>
+    <link rel="icon" type="image/x-icon" href="static/logo/titlebar.png">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/paymentcss.css')}}"> -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style2.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/indexkacss.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/productdescss.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/logreg.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/footerkacss.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/slider.css')}}">
+	
+	
+	
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/responsive.css')}}">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+
+
+
+	<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='logo/kisan-logo.png')}}">
+			<link href="{{ url_for('static', filename='css/owl.carousel.css')}}" rel="stylesheet">
+			<link href="{{url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet" media="all">
+			<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css')}}">
+			<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+			
+			<link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css')}}">
+			
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+			<link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css')}}">
+					<link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css')}}">
+
+	
+</head>
+<body>
+	
+	<!-- navbar -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="#"><img src="static/logo/kisan-final.png" height="70px" width="120px"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <!-- <div class="searchBox"> -->
+      <!-- <i class="fa fa-bars" id="menu-btn" onclick="openmenu()"></i> -->
+      <!-- <i class="fa fa-times" id="close-btn" onclick="closemenu()"></i> -->
+
+      <!-- <img src="static/logo/farmeasy.png" class="logo">
+      <input type="text" class="form-control">
+      <span class="input-group-text"><i class="fa fa-search"></i></span>
+    </div> -->
+    <ul class="navbar-nav ml-auto text-right" style="float:right">
+      <li class="nav-item  active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="/#about">About Us <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="/#contact">Contact Us<span class="sr-only">(current)</span></a>
+      </li>
+	  <li class="nav-item">
+       <a class="nav-link" href="/botsupport">Chat Bot</a>
+     </li>
+	 <li class="nav-item">
+        <a class="nav-link" href="/tutorial">Tutorials<span class="sr-only">(current)</span></a>
+      </li>
+      {% if session.user %}
+       <li class="nav-item">
+        <a class="nav-link" href="/getdata">Shop</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/yourorders">Orders</a>
+      </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/rentdata">Rent</a>
+      </li> 
+	  <li class="nav-item">
+        <a class="nav-link" href="/viewyourproducts">On Rent</a>
+      </li> <li class="nav-item">
+        <a class="nav-link" href="/sellerreg">Seller</a>
+      </li>
+      
+	  <li class="nav-item">
+        <a class="nav-link" href="/cart"><i class="fa fa-shopping-cart " style="position:relative; margin-top:-7px"></i>Cart</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/logout">Logout</a>
+      </li>
+
+      {%else%}
+      <li class="nav-item" >
+        <a class="nav-link" href="/register">Register</a>
+      </li>
+      <li class="nav-item">
+		<a class="nav-link" href="/login">Login</a>
+         <!-- login as float -->
+      </li>
+        {% endif %}
+    </ul>
+  </div>
+</nav>
+    {% include "includes/_message.html" %}
+    {% block body%}
+    {% endblock %}
+	
+ <!-- footer --> 
+<!-- <section class="footer"> -->
+		<!-- <div class="container tex-center"> -->
+			<!-- <div class="row"> -->
+				<!-- <div class="col-md-3"> -->
+					<!-- <h1>Useful links</h1> -->
+					<!-- <p>Privacy Policy</p>	 -->
+					<!-- <p>Terms of use</p>	 -->
+					<!-- <p>Return Policy</p>	 -->
+					<!-- <p>Discount Coupans</p>	 -->
+				<!-- </div> -->
+				<!-- <div class="col-md-3"> -->
+					<!-- <h1>Company</h1> -->
+					<!-- <p>About Us</p>	 -->
+					<!-- <p>Contact Us</p>	 -->
+					<!-- <p>Career</p> -->
+					<!-- <p>Affiliate</p>	 -->
+				<!-- </div> -->
+				<!-- <div class="col-md-3"> -->
+					<!-- <h1>Follow Us On</h1> -->
+					<!-- <p><i class="fa fa-facebook-official"></i>Facebook</p>	 -->
+					<!-- <p><i class="fa fa-youtube-play"></i>Youtube</p>	 -->
+					<!-- <p><i class="fa fa-linkedin"></i>LinkedIn</p> -->
+					<!-- <p><i class="fa fa-twitter"></i>Twitter</p>	 -->
+				<!-- </div> -->
+        <!-- <div class="col-md-3 footer-image"> -->
+        <!-- <h1>We Are:</h1> -->
+        <!-- <img src="static/logo/kisan-logo-footer.png"> -->
+        <!-- </div> -->
+			<!-- </div> -->
+			<!-- <hr> -->
+			<!-- <p class="copyright"><i class="fa fa-copyright"></i> -->
+<!-- MAde In India </p> -->
+		<!-- </div> -->
+	<!-- </section> -->
+	
+	
+</body>
+</html>

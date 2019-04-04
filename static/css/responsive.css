@@ -1,0 +1,384 @@
+@media (min-width:1281px) {
+  //CSS
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width:1025px) and (max-width:1280px) {
+  //CSS
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width:768px) and (max-width:1024px) {
+  .section {
+    padding: 5% 0;
+  }
+
+  .bg {
+    padding: relative;
+    height: 40vh;
+    width: 100%;
+  }
+
+  .cloud .cloud01 {
+    width: 20%;
+  }
+
+  .cloud .cloud02 {
+    width: 20%;
+  }
+
+  .cloud .cloud03 {
+    width: 20%;
+  }
+
+  .windmill {
+    width: 10%;
+    height: 20%;
+  }
+
+  .windmill2 {
+    width: 12%;
+    height: 21%;
+    bottom: -54%;
+    left: -12%;
+  }
+
+  .windmill3 {
+    width: 10%;
+    height: 15%;
+    bottom: -49%;
+    left: 50%;
+  }
+
+  .home {
+    width: 12%;
+    height: 13%;
+    bottom: -61%;
+    left: -13%;
+  }
+
+  .home2 {
+    width: 13%;
+    height: 21%;
+    bottom: -60%;
+    left: 17%;
+  }
+
+  .tractor {
+    width: 23%;
+    height: 34%;
+    bottom: -77%;
+  }
+
+  .navbar-default {
+    background-color: rgba(255, 255, 255, 0.65);
+    padding: 5px 0;
+    -webkit-transition: padding .3s;
+    -moz-transition: padding .3s;
+    transition: padding .3s;
+    border: 0
+  }
+
+  .navbar-default .navbar-brand {
+    font-size: 2em;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .navbar-default .navbar-nav>.active>a {
+    border-radius: 3px
+  }
+
+  .navbar-default.navbar-shrink {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #828282;
+    padding: 5px 0;
+  }
+
+  .navbar-default.navbar-shrink .navbar-brand {
+    font-size: 1.5em;
+    margin-top: 10px;
+  }
+
+  .intro-text {
+    padding-top: 230px;
+    padding-bottom: 400px;
+  }
+
+  .intro-text .intro-lead-in {
+    font-size: 50px;
+    line-height: 40px;
+    margin-bottom: 45px;
+  }
+
+  .intro-text .intro-heading {
+    line-height: 95px;
+    font-size: 77px;
+    margin-bottom: 50px;
+  }
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width:768px) and (max-width:1024px) {
+  .bg {
+    padding: relative;
+    height: 40vh;
+    width: 100%;
+  }
+
+  .cloud .cloud01 {
+    width: 20%;
+  }
+
+  .cloud .cloud02 {
+    width: 20%;
+  }
+
+  .cloud .cloud03 {
+    width: 20%;
+  }
+
+  .windmill {
+    width: 10%;
+    height: 20%;
+  }
+
+  .windmill2 {
+    width: 12%;
+    height: 21%;
+    bottom: -54%;
+    left: -12%;
+  }
+
+  .windmill3 {
+    width: 10%;
+    height: 15%;
+    bottom: -49%;
+    left: 50%;
+  }
+
+  .home {
+    width: 12%;
+    height: 13%;
+    bottom: -61%;
+    left: -13%;
+  }
+
+  .home2 {
+    width: 13%;
+    height: 21%;
+    bottom: -60%;
+    left: 17%;
+  }
+
+  .tractor {
+    width: 23%;
+    height: 34%;
+    bottom: -77%;
+  }
+
+  .navbar-nav {
+    margin: 20px 1px 0px;
+    padding: 0px 4px;
+  }
+
+  .navbar-brand {
+    height: 60px;
+    padding: 0px 0px;
+  }
+
+  .col-0-gutter {
+    padding-left: 18px;
+  }
+
+  .footer-image img {
+    width: 45%;
+  }
+
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media (min-width:481px) and (max-width:767px) {
+  .col-0-gutter {
+    padding-left: 18px;
+  }
+
+  .bg {
+    padding: relative;
+    height: 40vh;
+    width: 100%;
+  }
+
+  .cloud .cloud01 {
+    width: 27%;
+  }
+
+  .cloud .cloud02 {
+    width: 27%;
+  }
+
+  .cloud .cloud03 {
+    width: 27%;
+  }
+
+  .windmill {
+    width: 10%;
+    height: 20%;
+  }
+
+  .windmill2 {
+    width: 12%;
+    height: 21%;
+    bottom: -51%;
+    left: -22%;
+  }
+
+  .windmill3 {
+    width: 10%;
+    height: 15%;
+    bottom: -42%;
+    left: 67%;
+  }
+
+  .home {
+    width: 16%;
+    height: 13%;
+    bottom: -56%;
+    left: -13%;
+  }
+
+  .home2 {
+    width: 23%;
+    height: 24%;
+    bottom: -51%;
+    left: 17%;
+  }
+
+  .tractor {
+    width: 23%;
+    height: 30%;
+    bottom: -49%;
+  }
+
+  .footer-image img {
+    width: 45%;
+  }
+
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width:320px) and (max-width:480px) {
+  .bg {
+    padding: relative;
+    height: 40vh;
+    width: 100%;
+  }
+
+  .cloud .cloud01 {
+    width: 27%;
+  }
+
+  .cloud .cloud02 {
+    width: 27%;
+  }
+
+  .cloud .cloud03 {
+    width: 27%;
+  }
+
+  .windmill {
+    width: 10%;
+    height: 20%;
+  }
+
+  .windmill2 {
+    width: 12%;
+    height: 21%;
+    bottom: -51%;
+    left: -22%;
+  }
+
+  .windmill3 {
+    width: 10%;
+    height: 15%;
+    bottom: -42%;
+    left: 67%;
+  }
+
+  .home {
+    width: 16%;
+    height: 13%;
+    bottom: -56%;
+    left: -13%;
+  }
+
+  .home2 {
+    width: 23%;
+    height: 24%;
+    bottom: -51%;
+    left: 17%;
+  }
+
+  .tractor {
+    width: 23%;
+    height: 30%;
+    bottom: -49%;
+  }
+
+  #back-top {
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+  }
+
+  #back-top a {
+    width: 40px;
+    height: 40px;
+  }
+
+  #back-top i {
+    margin-top: 7px;
+    font-size: 20px;
+  }
+
+  .navbar-toggle {
+    margin-top: 19px;
+  }
+
+  .section-title p {
+    margin: 20px;
+  }
+
+  .section-title h2 {
+    font-size: 25px;
+    margin: 0 0 16px 0;
+  }
+
+  .col-0-gutter {
+    padding-left: 18px;
+  }
+
+  .footer-image img {
+    width: 45%;
+  }
+
+}
