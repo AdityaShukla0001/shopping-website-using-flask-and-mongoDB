@@ -24,11 +24,11 @@
 				<div class="product-top">
 					
 				</div>
-				<div class="product-bottom text-center"  style="margine:10%">
+				<div class="product-bottom text-center"  style="margin:10%">
 					<h3>Name : {{rresult[x]['model_name']}}</h3>
 					<h5>Price : {{rresult[x]['expected_price']}}</h5>
 			<form action="/removefromyourorders" method='POST'>
-			<button type="submit" name =  "remove" value ="{{rresult[x]['model_name']}}">Remove from rent</button>
+			<button type="submit" style="background-color:orange;border-radius:7px;font-size:20px;color:#fff" name =  "remove" value ="{{rresult[x]['model_name']}}">Remove from rent</button>
 			</form>
 				</div>
 			</div>
